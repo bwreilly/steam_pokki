@@ -1,4 +1,3 @@
-var DEALS = {};
 $(function() {
 	// http://store.steampowered.com
 	$.get('testpage.html', function(data) {
@@ -6,6 +5,7 @@ $(function() {
 			.children().each(function(i, game){
 				localStorage[i] = "{"+
 					"\"title\": \"" + $(game).find("h4").text().trim() + "\"," +
+					"\"link\": \"" + $(game).find("a").attr("href") + "\"," +
 					"\"oldprice\": \"$" + $(game).find("div.tab_price").text().trim().split("$")[1]+ "\"," +
 					"\"newprice\": \"$" + $(game).find("div.tab_price").text().trim().split("$")[2]+ "\"," +
 					"\"discount\":\"" + $(game).find("div.tab_discount.discount_pct").text().trim()+ "\"," +

@@ -2,9 +2,22 @@
 <head>
 	<title>Steam Discounts</title>
 	<script src="js/jquery-1.5.1.min.js"></script>
+	<script src="js/jquery.tmpl.min.js"></script>
 	<script src="js/ui.js"></script>
+	<script id="gameTemplate" type="text/x-jquery-tmpl">
+	<link rel="stylesheet" href="css/main.css" type="text/css"/>
+    <div class="game">
+    	<h4><a href=${link}>${title}</a></h4>
+    	<div class="new savings" >${discount} </strong></div> </br>
+    	<div class="old">${oldprice} </div>
+    	<div class="new">${newprice} </div></br>
+    	${genre}</br>
+    	${release}
+    </div>
+</script>
 </head>
 <body>
-<div id="deals"></div>
+<div id="deals">
+</div>
 </body>
 </html>
