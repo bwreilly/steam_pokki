@@ -12,5 +12,6 @@ $(function() {
 					"\"genre\":\""+ $(game).find("div.genre_release").text().split("-")[0].trim()+ "\"," +
 					"\"release\":\""+ ($(game).find("div.genre_release").text().split("-")[1] || "").trim()+ "\"}";
 			});
+		//compare changes to localstorage, for each new deal, add to count of desktop icon
 	});	
 });
