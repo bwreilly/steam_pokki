@@ -1,7 +1,7 @@
 $(function() {
 	var games = [];
-	for (index in localStorage) {
-		games.push(JSON.parse(localStorage[index]));
+	for (var game in localStorage) {
+		games.push(JSON.parse(localStorage.getItem(game)));
 	}
 	$("#gameTemplate").tmpl(games).appendTo("#deals");
 });
