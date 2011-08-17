@@ -23,9 +23,13 @@ $(function() {
 		$.get('testpage.html', function(data) { // http://store.steampowered.com
 			refreshid = (((1+Math.random())*0x10000)|0).toString(16);
 			$(data).find("div#tab_Discounts_items").children().each(addGame);
-			var store = function() {
+			var update = function() {
+				var num;
 				for (var i = games.length - 1; i >= 0; i--) {
 					var game = games.pop();
+					if (game.isnew) { 
+						num++; 
+					};
 					localStorage.setItem(game.title, JSON.stringify(game));;
 				};
 			}();
