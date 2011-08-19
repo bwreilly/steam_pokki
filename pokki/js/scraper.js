@@ -45,6 +45,7 @@ $(function() {
 		// pokki.setIconBadge(num);
 		setTimeout(refreshGames, 1000*10); //daily 1000*60*60*24
 	};
+	localStorage.clear()
 	refreshGames();
 	// pokki.addEventListener('popup_hidden', function() {
 	// 	pokki.removeIconBadge();
