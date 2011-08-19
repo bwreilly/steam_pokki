@@ -1,5 +1,21 @@
 body {
 	background-color: #1F1F1F;
+	width: 560px;
+	height: 600px;
+}
+a {
+	color: #529FBF;
+}
+span {
+	font-family: Arial, Helvetica, sans-serif;
+	display: inline-block;
+	color: #529FBF;
+}
+div.headline {
+	margin-bottom: 0.3em;
+	margin-top: 0.3em;
+	font-size: 18px;
+	font-weight: bold;
 }
 h4 {
 	margin-bottom: 0.3em;
@@ -14,9 +30,16 @@ li {
 	color: white;
 	/*outline-offset: 10px; /*Delete if you don't want an offset*/
 }
+div.close {
+	font-family: arial;
+	color: white;
+	text-alight: right;
+}
 div.game {
 	font-family: Arial, Helvetica, sans-serif;
 	color: white;
+	height: 127px;
+	width: 265px;
 /*	-moz-box-sizing: content-box;
 	-webkit-box-sizing: content-box;
 	box-sizing: content-box; */
@@ -31,6 +54,7 @@ div.game {
 	/*box-shadow: 10px 10px;*/
 	display: inline-block;
 	margin: 4px 1px 10px 9px;
+	float: left;
 }
 div.old {
 	color: red;
@@ -44,7 +68,4 @@ div.new {
 div.savings {
 	font-size: large;
 	font-weight: bolder;
-}
-a {
-	color: #529FBF;
 }

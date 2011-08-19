@@ -1,4 +1,4 @@
-$(function() {
+var loadGames = function() {
 	var refreshid;
 	var games = [];
 	var addGame = function(i, gamediv) {
@@ -20,34 +20,36 @@ $(function() {
 		games.push(game);
 	};
 	var refreshGames = function() {
-		$.get('testpage.html', function(data) { // http://store.steampowered.com
-			refreshid = (((1+Math.random())*0x10000)|0).toString(16);
-			$(data).find("div#tab_Discounts_items").children().each(addGame);
-			var update = function() {
-				var num;
-				for (var i = games.length - 1; i >= 0; i--) {
-					var game = games.pop();
-					if (game.isnew) { 
-						num++; 
+		var num = 0;
+		$.get('http://store.steampowered.com', function(data) { // http://store.steampowered.com
+			if (data != undefined && data != null) {
+				refreshid = (((1+Math.random())*0x10000)|0).toString(16);
+				$(data).find("div#tab_Discounts_items").children().each(addGame);
+				var update = function() {
+					for (var i = games.length - 1; i >= 0; i--) {
+						var game = games.pop();
+						if (game.isnew) { 
+							num++; 
+						};
+						localStorage.setItem(game.title, JSON.stringify(game));;
 					};
-					localStorage.setItem(game.title, JSON.stringify(game));;
-				};
-			}();
-			var removeOld = function() {
-				for (var x in localStorage) {
-					var game = JSON.parse(localStorage.getItem(x));
-					if (game.id !== refreshid) {
-						localStorage.removeItem(x);
-					}
-				};
-			}();
+					pokki.setIconBadge(num);
+				}();
+				var removeOld = function() {
+					for (var x in localStorage) {
+						var game = JSON.parse(localStorage.getItem(x));
+						if (game.id !== refreshid) {
+							localStorage.removeItem(x);
+						}
+					};
+				}();
+			}
 		});
-		// pokki.setIconBadge(num);
 		setTimeout(refreshGames, 1000*10); //daily 1000*60*60*24
 	};
 	localStorage.clear()
 	refreshGames();
-	// pokki.addEventListener('popup_hidden', function() {
-	// 	pokki.removeIconBadge();
-	// });
-});
+	pokki.addEventListener('popup_hidden', function() {
+		pokki.removeIconBadge();
+	});
+};
