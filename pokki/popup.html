@@ -5,21 +5,22 @@
 	<script src="js/jquery.tmpl.min.js"></script>
 	<script src="js/ui.js"></script>
 	<script id="gameTemplate" type="text/x-jquery-tmpl">
-	<link rel="stylesheet" href="css/main.css" type="text/css"/>
-    <div class="game">
-    	<h4><a href=${link}>${title}</a></h4>
-    	<div class="new savings" >${discount} </strong></div> </br>
-    	<div class="old">${oldprice} </div>
-    	<div class="new">${newprice} </div></br>
-    	${genre}</br>
-    	${release}
-    </div>
+		<tr>
+			<td><div class="title" ><a href=${link}>${title}</a></div></td>
+			<td><div class="new savings" >${discount} </strong></div></td>
+			<td><div class="new">${newprice} </div></td>
+			<td><div class="old">${oldprice} </div></td>
+			<td>${genre}</td>
+			<td>${release}</td>
+		</tr>
 </script>
+<link rel="stylesheet" href="css/main.css" type="text/css"/>
 </head>
 <body>
-<span><div class="headline">Steam Discounts</div></span>
-<div class="close">X</div>
-<div id="deals"></div>
-<span>http://store.steampowered.com/</span>
+<span><h3>Steam Discounts</h3></span><div class="close"><img src="img/minimize.png" alt="close" /></div>
+<table id="deals">
+</table>
+<br/>
+<span><div class="store">http://store.steampowered.com/</div></span>
 </body>
 </html>

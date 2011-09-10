@@ -1,71 +1,66 @@
 body {
-	background-color: #1F1F1F;
-	width: 560px;
-	height: 600px;
+    background-color: #1F1F1F;
+    width: 560px;
+    height: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+table {
+    width: 560px;
+    border-spacing: 0.0em 0.0em;
 }
 a {
-	color: #529FBF;
+    color: #529FBF;
 }
 span {
-	font-family: Arial, Helvetica, sans-serif;
-	display: inline-block;
-	color: #529FBF;
+    color: #529FBF;
 }
 div.headline {
-	margin-bottom: 0.3em;
-	margin-top: 0.3em;
-	font-size: 18px;
-	font-weight: bold;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+    font-size: 18px;
+    font-weight: bold;
 }
-h4 {
-	margin-bottom: 0.3em;
-	margin-top: 0.3em;
+div.title {
+    font-weight: bolder;
+    font-size: large;
+    padding-top: 0.2em; padding-bottom: 0.2em;
 }
-li {
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	outline: 2px solid #595959;
-	font-family: Arial, Helvetica, sans-serif;
-	color: white;
-	/*outline-offset: 10px; /*Delete if you don't want an offset*/
-}
+h3 {
+    font-size: 1.5em;
+    color: #D4D4D4;
+    float: left;
+    margin-top: 0px;
+margin-bottom: 0.2em;}
+td {
+    
+    padding: 0.3em 0.3em;
+    min-width: 45px;
+    max-width: 140px;
+border-top: 1px solid #333; color: #9E9E9E;}
+div.store {
+    font-size: 0.7em;
+    text-decoration: underline;
+padding: 1px;}
 div.close {
-	font-family: arial;
-	color: white;
-	text-alight: right;
-}
-div.game {
-	font-family: Arial, Helvetica, sans-serif;
-	color: white;
-	height: 127px;
-	width: 265px;
-/*	-moz-box-sizing: content-box;
-	-webkit-box-sizing: content-box;
-	box-sizing: content-box; */
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box; 
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	outline: 2px solid #595959;
-	outline-offset: 6px;
-	/*box-shadow: 10px 10px;*/
-	display: inline-block;
-	margin: 4px 1px 10px 9px;
-	float: left;
+    font-family: arial;
+    color: white;
+    float: right;
+    display: inline-block;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid white;
 }
 div.old {
-	color: red;
-	text-decoration: line-through;
-	display: inline-block;
+    color: red;
+    text-decoration: line-through;
+    display: inline-block;
 }
 div.new {
-	color: green;
-	display: inline-block;
+    color: green;
+    display: inline-block;
 }
 div.savings {
-	font-size: large;
-	font-weight: bolder;
+    font-size: large;
+    font-weight: bolder;
 }
